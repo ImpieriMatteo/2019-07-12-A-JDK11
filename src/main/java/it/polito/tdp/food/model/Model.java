@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -50,7 +51,7 @@ public class Model {
 
 	public Map<Food, Double> getCalCongiunteMax(Food scelto) {
 		Collections.sort(this.archi);
-		Map<Food, Double> result = new HashMap<>();
+		Map<Food, Double> result = new LinkedHashMap<>();
 		
 		for(Arco a : this.archi) {
 			

@@ -32,6 +32,7 @@ public class Simulatore {
 			
 			if(numStaz<=this.numStazioniLavoro) {
 				this.queue.add(new Evento(f, vicini.get(f), numStaz));
+				this.cibiPreparati.add(f);
 				numStaz++;
 			}
 			else 
@@ -46,7 +47,6 @@ public class Simulatore {
 			Evento e = this.queue.poll();
 			
 			this.tempoTOT = e.getTempo();
-			this.cibiPreparati.add(e.getCibo());
 			this.numCibiPreparati++;
 			
 			Map<Food, Double> adiacentiMax = this.model.getCalCongiunteMax(e.getCibo());
@@ -57,6 +57,7 @@ public class Simulatore {
 				
 				if(!this.cibiPreparati.contains(f)) {
 					prossimoCibo = f;
+					this.cibiPreparati.add(f);
 					tempoProssimoCibo = adiacentiMax.get(f);
 					break;
 				}
