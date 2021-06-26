@@ -46,6 +46,7 @@ public class Simulatore {
 			
 			Evento e = this.queue.poll();
 			
+			System.out.println(e.toString());
 			this.tempoTOT = e.getTempo();
 			this.numCibiPreparati++;
 			

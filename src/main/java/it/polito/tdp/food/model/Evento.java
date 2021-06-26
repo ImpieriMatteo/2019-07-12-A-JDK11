@@ -39,6 +39,11 @@ public class Evento implements Comparable<Evento>{
 	@Override
 	public int compareTo(Evento other) {
 		return this.tempo.compareTo(other.tempo);
+	}
+
+	@Override
+	public String toString() {
+		return "Evento [cibo=" + cibo + ", tempo=" + tempo + ", stazione=" + stazione + "]";
 	};
 
 }

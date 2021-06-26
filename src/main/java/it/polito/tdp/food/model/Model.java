@@ -45,8 +45,10 @@ public class Model {
 		return String.format("GRAFO CREATO!!\n\n#VERTICI: %s\n#ARCHI: %s\n", this.grafo.vertexSet().size(), this.grafo.edgeSet().size());
 	}
 	
-	public Collection<Food> getAllVertici() {
-		return this.idMap.values();
+	public List<Food> getAllVertici() {
+		List<Food> temp = new ArrayList<>(this.idMap.values());
+		Collections.sort(temp);
+		return temp;
 	}
 
 	public Map<Food, Double> getCalCongiunteMax(Food scelto) {

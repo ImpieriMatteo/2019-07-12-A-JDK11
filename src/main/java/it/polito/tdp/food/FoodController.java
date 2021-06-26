@@ -52,6 +52,7 @@ public class FoodController {
 
     @FXML
     void doCreaGrafo(ActionEvent event) {
+    	this.boxFood.getItems().clear();
     	txtResult.clear();
     	txtResult.appendText("Creazione grafo...\n\n");
     	
